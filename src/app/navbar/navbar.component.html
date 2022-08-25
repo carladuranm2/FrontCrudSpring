@@ -1,0 +1,12 @@
+<div class="navbar">
+  <div class="container">
+    <!-- MENUS -->
+    <!-- MENU HORIZONTAL -->
+    <div fxShow fxHide.lt-md id="container-buttons">
+      <a id="btn-mobile-homepage" routerLinkActive="active" *ngIf="here" (click)="login()" routerLink="/login">Login</a>
+      <a id="btn-mobile-homepage" routerLinkActive="active" *ngIf="salir" (click)="logOut()" routerLink="/login">LogOut</a>
+      <a id="btn-mobile-homepage" routerLinkActive="active" routerLink="/admin">Administradores</a>
+      <a id="btn-mobile-homepage" *ngIf="Active" routerLinkActive="active" routerLink="/create">Create User</a>
+    </div>
+  </div>
+</div>

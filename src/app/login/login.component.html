@@ -1,0 +1,25 @@
+<body>
+  <div class="container">
+      <h1>Please Login</h1>
+      <form>
+          <div class="form-control">
+              <input type="text"  [(ngModel)]="email" name="email"required>
+              <label>E-mail</label>
+
+          </div>
+
+          <div class="form-control">
+              <input type="password" [(ngModel)]="password" name="password"required>
+              <label>Password</label>
+          </div>
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="search"></mat-icon>
+          <button class="btn" (click)="redirectLogin()">Login</button>
+
+          <p class="text">Don't have an account? <a href="#">Register</a></p>
+      </form>
+
+
+  </div>
+
+  <script src="script.js"></script>
+</body>

@@ -2,8 +2,14 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+const base_url1=`http://localhost:8080`
 export const environment = {
-  production: false
+  production: false,
+  getUsers:`${base_url1}/allUsers`,
+  deleteUser:`${base_url1}/deleteUserById`,
+  CreateUser:`${base_url1}/createUser`,
+  login:`${base_url1}/login/`,
+  validateToken: `${base_url1}/secure/validate-token/`,
 };
 
 /*

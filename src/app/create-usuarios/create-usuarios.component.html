@@ -1,0 +1,16 @@
+<div class="wrapper">
+
+  <form class="form-signin">
+    <h2 class="form-signin-heading">Create New User</h2>
+    <input type="text" [(ngModel)]='nombre'  class="form-control" name="username" placeholder="Name" required="" autofocus="" />
+    <input type="text" [(ngModel)]='email' class="form-control" name="username" placeholder="Email" required="" autofocus="" />
+    <input type="text" [(ngModel)]='edad' class="form-control" name="username" placeholder="edad" required="" autofocus="" />
+    <input type="text" [(ngModel)]='telefono' class="form-control" name="username" placeholder="Telefono" required="" autofocus="" />
+    <input type="text" [(ngModel)]='direccion' class="form-control" name="username" placeholder="Direccion" required="" autofocus="" />
+    <input type="text" [(ngModel)]='rol' class="form-control" name="username" placeholder="Rol" required="" autofocus="" />
+    <input type="password" [(ngModel)]='password' class="form-control" name="password" placeholder="Password" required=""/>
+    <div style="justify-content:center; display:flex;">
+    <button style="display: block;" class="btn btn-lg btn-primary btn-block" type="submit" (click)="createNewUser()">Create</button>
+    </div>
+  </form>
+</div>

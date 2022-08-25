@@ -1,0 +1,47 @@
+<div class="content-button-search">
+  <form>
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="home"></mat-icon>
+    <input class="button-search" type="text" name="filterSearch" [(ngModel)]="filterSearch" placeholder="Search..."
+    />
+  </form>
+</div>
+<table class="table-camp" style="flex: 1">
+  <thead>
+    <tr>
+      <th>
+        <div class="content-header">
+          Nombre
+        </div>
+      </th>
+      <th>
+        <div class="content-header">
+          email
+        </div>
+      </th>
+      <th>
+        <div class="content-header">
+          direccion
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of filteredlistBlogs| async |filtro: filterSearch:'name':dataSource
+      ">
+      <td class="radius">
+        <div class="container-outline">{{ item.name}}</div>
+      </td>
+      <td class="user">
+        <div class="container-outline">{{ item.email }}</div>
+      </td>
+      <td class="total">
+        <div class="container-outline">{{ item.direccion }}</div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="example-button-container">
+  <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+    <mat-icon>delete</mat-icon>
+  </button>
+</div>
