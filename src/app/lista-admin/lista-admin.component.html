@@ -25,10 +25,10 @@
       </th>
     </tr>
   </thead>
-  <tbody>
+  <tbody >
     <tr *ngFor="let item of filteredlistBlogs| async |filtro: filterSearch:'name':dataSource
-      ">
-      <td class="radius">
+      " (click)="delete(item.id)" >
+      <td class="radius" >
         <div class="container-outline">{{ item.name}}</div>
       </td>
       <td class="user">
@@ -40,8 +40,3 @@
     </tr>
   </tbody>
 </table>
-<div class="example-button-container">
-  <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
-    <mat-icon>delete</mat-icon>
-  </button>
-</div>

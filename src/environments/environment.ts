@@ -10,6 +10,7 @@ export const environment = {
   CreateUser:`${base_url1}/createUser`,
   login:`${base_url1}/login/`,
   validateToken: `${base_url1}/secure/validate-token/`,
+  editUser:`${base_url1}/updateUser`
 };
 
 /*

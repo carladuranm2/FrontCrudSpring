@@ -22,9 +22,20 @@ export class ListaAdminComponent implements OnInit ,OnDestroy{
     // this.filteredlistBlogs?.unsubscribe();
   }
 
+  delete(item : any){
+console.log(item,"item");
+this.userService.deleteUser(item).subscribe((data: any) =>{
+  console.log(data);
+  this.getUsers();
+})
+  }
+
   getUsers(){
     this.userService.getUser().subscribe((data : any) => {
       this.dataSource = data.data;
+      console.log('====================================');
+      console.log(this.dataSource);
+      console.log('====================================');
       this.filteredlistBlogs.next(this.dataSource.slice(0));
     })
   }

@@ -31,4 +31,8 @@ export class ClientesService {
     .append('Authorization', token)
     return this.http.post(environment.validateToken,{},{ headers: headers })
   }
+
+  editUser(user : any ): Observable<any>{
+    return this.http.put(environment.editUser,user);
+  }
 }
